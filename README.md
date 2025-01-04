@@ -1,3 +1,25 @@
+# Getting Started with Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+# Clean Code
+- Descriptive names
+- Atomic Design
+- Helper functions
+    - Childern as props
+- Functional (declarative) programmimg
+    - Pure functions
+    - Immutability (by Hooks - useState)
+    - Side effects are handled by Hooks - UseEffect
+
+- CI/CD
+    - project is in  GitHub
+        - Automatic test
+            - Unit Tests (Jest, React Testing Library.)
+            - Integration Tests
+            - E2E Tests (Cypress )
+    - Write tests for components
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
