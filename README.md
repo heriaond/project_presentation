@@ -46,6 +46,13 @@ Project uses yarn package manager.
 
 React + TypeScript + Vite
 
+### Commands
+
+Start dev server
+
+- root directory - `yarn start:web`
+- in project - `yarn dev`
+
 ## Mobile
 
 React Native + Expo
