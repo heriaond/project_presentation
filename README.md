@@ -1,70 +1,55 @@
-# This project was created to show my abilities
+# Heri CV project
 
-# Clean Code
+## Introduction
+
+This project was created to show my abilities
+Using Best practices.
+
 - Descriptive names
 - Atomic Design
 - Helper functions
-    - Childern as props
+  - Childern as props
 - Functional (declarative) programmimg
-    - Pure functions
-    - Immutability (by Hooks - useState)
-    - Side effects are handled by Hooks - UseEffect
+
+  - Pure functions
+  - Immutability (by Hooks - useState)
+  - Side effects are handled by Hooks - UseEffect
 
 - CI/CD
-    - project is in  GitHub
-        - Automatic test
-            - Unit Tests (Jest, React Testing Library.)
-            - Integration Tests
-            - E2E Tests (Cypress )
-    - Write tests for components
+  - project is in GitHub
+    - Automatic test
+      - Unit Tests (Jest, React Testing Library.)
+      - Integration Tests
+      - E2E Tests (Cypress )
+  - Write tests for components
 
-# React + TypeScript + Vite
+## Architecture
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The project is organized as a monorepo, combining all parts of the application:
 
-Currently, two official plugins are available:
+- /apps: Contains individual applications:
+  - web: Web application (React + Vite).
+  - mobile: Mobile application (React Native).
+  - backend: Backend server (.NET ASP.NET Core).
+- /packages: Shared modules, such as common components and logic.
+- [centralized config files]
+  All applications share configurations and dependencies through centralized settings in the root directory. This structure simplifies development and project management.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Development Tools
 
-## Expanding the ESLint configuration
+Project uses yarn package manager.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- use `yarn install` only in the root directory (heri-project) to avoid dependency conflicts.
+  - yarn.lock is in the root directory
 
-- Configure the top-level `parserOptions` property like this:
+## Web
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+React + TypeScript + Vite
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Mobile
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+React Native + Expo
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## BackEnd
+
+ASP.NET Core

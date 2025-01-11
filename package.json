@@ -1,34 +1,20 @@
 {
   "name": "heri-project",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "workspaces": [
+    "apps/*"
+  ],
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "start:web": "yarn workspace web dev",
+    "build:web": "yarn workspace web build",
     "lint": "eslint .",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "husky": "^9.1.7",
-    "lint-staged": "^15.3.0",
-    "nvm": "^0.0.4",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "prettier:fix": "prettier --write ."
   },
   "devDependencies": {
-    "@eslint/js": "^9.17.0",
-    "@types/react": "^18.3.18",
-    "@types/react-dom": "^18.3.5",
-    "@vitejs/plugin-react-swc": "^3.5.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.3.0",
     "eslint": "^9.17.0",
-    "eslint-plugin-react": "^7.37.3",
-    "eslint-plugin-react-hooks": "^5.0.0",
-    "eslint-plugin-react-refresh": "^0.4.16",
-    "globals": "^15.14.0",
-    "typescript": "~5.6.2",
-    "typescript-eslint": "^8.18.2",
-    "vite": "^6.0.5"
+    "prettier": "^2.8.0"
   },
   "husky": {
     "hooks": {
