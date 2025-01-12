@@ -58,5 +58,9 @@ Start dev server
 React Native + Expo
 
 ## BackEnd
+SDKs --> .NET 8
+Project technologi --> ASP.NET Core
 
-ASP.NET Core
+Start up
+1. You have to open backend folder throught IDEA /apps/backend (Not root folder)
+2. IDEA will recognize the project structure --> right click on Infrastructure project or Run throught configuration [Infrastructure: http] for development
