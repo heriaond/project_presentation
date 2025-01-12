@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".", // Kořenová složka projektu
+    "paths": {
+      "@/*": ["apps/web/src/*"], // Mapování aliasu "@" na složku src
+      "@packages/*": ["packages/*"] // Mapování aliasu "@packages" na složku packages
+    }
+  }
+}
