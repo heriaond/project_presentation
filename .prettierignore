@@ -4,3 +4,4 @@ dist
 *.min.js
 *.log
 package-lock.json
+yarn.lock
